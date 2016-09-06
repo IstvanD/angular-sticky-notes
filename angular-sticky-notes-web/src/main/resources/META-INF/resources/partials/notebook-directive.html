@@ -1,0 +1,13 @@
+<div ng-show="!notes.length">Please add some notes...</div>
+<ul class="thumbnails">
+    <li ng-repeat="note in notes track by $index">
+        <my-note class="span2 thumbnail" ng-class="{highPriority: note.priority == 1, mediumPriority: note.priority == 2, lowPriority: note.priority == 3}" delete="deleteNote(note)" update="updateNote(note)" note="note">
+        	<div class="popover-wrapper">
+        		<button class="btn btn-large close pull-left" editable-select="note.priority" e-ng-options="p.value as p.text for p in priorities" onaftersave="updateNote(note)"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></button>
+        	</div>
+            <button class="btn btn-large close pull-right" ng-click="deleteNote(note)">&times;</button>
+            <hr/>
+            <div editable-textarea="note.content" e-cols="18" style="white-space: pre-wrap; word-wrap: break-word;" onaftersave="updateNote(note)">{{note.content || 'empty'}}</div>
+        </my-note>
+    </li>
+</ul>

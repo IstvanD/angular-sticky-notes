@@ -1,0 +1,23 @@
+<div>
+	<div id="app">
+		<div class="form-actions">
+            <div class="input-append">
+                <form class="form-group" ng-submit="addNote(noteContent,priority);resetForm();">
+                    <textarea class="span3" ng-model="noteContent" cols="18" wrap="hard" placeholder="Add a note"></textarea>   
+                    <button class="btn btn-success" type="submit"
+                            ng-disabled="!noteContent" ng-click="addNote(noteContent,priority);resetForm();">Add Note
+                    </button> 
+                    </br>
+                    <fieldset style="padding: 15px; border: 1px solid #b1b1b1;">
+                    	<legend style="width: 5%; padding: 5px; margin-bottom: 1px; font-size: 15px;">Priority</legend>
+						<button class="highPriorityButton" type="button" ng-click="priority = 1">High</button>
+                    	<button class="mediumPriorityButton"  type="button" ng-click="priority = 2;">Medium</button>
+                    	<button class="lowPriorityButton" type="button" ng-click="priority = 3;">Low</button>
+                    	<div class="priorityIndicator" ng-class="{highPriority: priority == 1, mediumPriority: !priority || priority == 2, lowPriority: priority == 3}"></div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <my-notebook notes="notes" ondelete="deleteNote(note)" onupdate="updateNote(note)"></my-notebook>
+    </div>
+</div>

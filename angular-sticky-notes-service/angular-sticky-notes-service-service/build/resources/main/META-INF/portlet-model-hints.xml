@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.example.notes.model.Note">
+		<field name="noteId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="content" type="String" />
+		<field name="priority" type="int" />
+	</model>
+</model-hints>

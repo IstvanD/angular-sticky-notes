@@ -1,0 +1,3 @@
+Bundle-SymbolicName: angular.sticky.notes.web
+Bundle-Version: 1.0.0
+Web-ContextPath: /angular-sticky-notes-web

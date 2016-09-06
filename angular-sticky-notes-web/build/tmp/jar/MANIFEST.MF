@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: angular.sticky.notes.web
+Bundle-SymbolicName: angular.sticky.notes.web
+Bundle-Version: 1.0.0
+Created-By: 1.8.0_102 (Oracle Corporation)
+Import-Package: com.liferay.portal.kernel.portlet.bridges.mvc;version=
+ "[1.0,2)",javax.portlet;version="[2.0,3)",javax.servlet,javax.servlet
+ .http
+Javac-Debug: on
+Javac-Deprecation: off
+Javac-Encoding: Cp1250
+Private-Package: com.example,content
+Provide-Capability: osgi.service;objectClass:List<String>="javax.portl
+ et.Portlet",liferay.resource.bundle;bundle.symbolic.name="angular.sti
+ cky.notes.web";resource.bundle.base.name="content.Language"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=jsp.taglib
+ )(uri=http://java.sun.com/portlet_2_0))",osgi.extender;filter:="(&(os
+ gi.extender=jsp.taglib)(uri=http://liferay.com/tld/aui))",osgi.extend
+ er;filter:="(&(osgi.extender=jsp.taglib)(uri=http://liferay.com/tld/u
+ i))",osgi.extender;filter:="(&(osgi.extender=jsp.taglib)(uri=http://l
+ iferay.com/tld/aui))",osgi.extender;filter:="(&(osgi.extender=jsp.tag
+ lib)(uri=http://liferay.com/tld/ui))",osgi.ee;filter:="(&(osgi.ee=Jav
+ aSE)(version=1.8))"
+Service-Component: OSGI-INF/com.example.AngularStickyNotesPortlet.xml
+Tool: Bnd-3.1.0.201512181341
+Web-ContextPath: /angular-sticky-notes-web
